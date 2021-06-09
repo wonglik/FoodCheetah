@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wonglik.foodcheetah">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FoodCheetah">
+        <activity android:name=".DeliveryVerifyPhone"></activity>
+        <activity android:name=".Deliverysendotp" />
+        <activity android:name=".DeliveryForgotPassword" />
+        <activity android:name=".DeliveryFoodPanel_BottomNavigation" />
+        <activity android:name=".Sendotp" />
+        <activity android:name=".ForgotPassword" />
+        <activity android:name=".CustomerFoodPanel_BottomNavigation" />
+        <activity android:name=".VerifyPhone" />
+        <activity android:name=".Chefsendotp" />
+        <activity android:name=".ChefForgotPassword" />
+        <activity android:name=".ChefFoodPanel_BottomNavigation" />
+        <activity android:name=".ChefVerifyPhone" />
+        <activity android:name=".DeliveryRegistration" />
+        <activity android:name=".DeliveryLoginPhone" />
+        <activity android:name=".DeliveryLogin" />
+        <activity android:name=".Registration" />
+        <activity android:name=".LoginPhone" />
+        <activity android:name=".Login" />
+        <activity android:name=".ChefRegistration" />
+        <activity android:name=".ChefLoginPhone" />
+        <activity android:name=".ChefLogin" />
+        <activity android:name=".ChefLoginPhone" />
+        <activity android:name=".ChefLogin" />
+        <activity android:name=".Choices" />
+        <activity android:name=".MainMenu" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
