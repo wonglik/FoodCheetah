@@ -2,6 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.wonglik.foodcheetah">
 
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        android:maxSdkVersion="28" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +13,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodCheetah">
-        <activity android:name=".DeliveryVerifyPhone"></activity>
+        <activity android:name="com.canhub.cropper.CropImageActivity"/>
+        <activity android:name=".chefFoodPanel.chef_postDish"></activity>
+        <activity android:name=".DeliveryVerifyPhone" />
         <activity android:name=".Deliverysendotp" />
         <activity android:name=".DeliveryForgotPassword" />
         <activity android:name=".DeliveryFoodPanel_BottomNavigation" />
@@ -28,8 +34,6 @@
         <activity android:name=".LoginPhone" />
         <activity android:name=".Login" />
         <activity android:name=".ChefRegistration" />
-        <activity android:name=".ChefLoginPhone" />
-        <activity android:name=".ChefLogin" />
         <activity android:name=".ChefLoginPhone" />
         <activity android:name=".ChefLogin" />
         <activity android:name=".Choices" />
