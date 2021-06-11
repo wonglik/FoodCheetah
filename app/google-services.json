@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "195151349103-p7gcge7cmefo7thfd4q79ii6v25th6sc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.wonglik.foodcheetah",
+            "certificate_hash": "ac4281ae62497379bab4366815f0071bd7dbe6e8"
+          }
+        },
+        {
           "client_id": "195151349103-i5ospgpvdeo6ls5sqhhajokhpjmau86h.apps.googleusercontent.com",
           "client_type": 3
         }
