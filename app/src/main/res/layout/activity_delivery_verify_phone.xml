@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:id="@+id/Verifycode"
-            android:background="@drawable/btnblueish"
+            android:backgroundTint="@color/blueish"
             android:text="Verify"
             android:textSize="18sp"
             android:textColor="@color/white"/>
@@ -53,7 +53,7 @@
             android:id="@+id/Resendcode"
             android:textColor="@color/white"
             android:text="Resend OTP"
-            android:background="@drawable/btnred"
+            android:backgroundTint="@color/Red"
             android:textSize="18sp"/>
         <TextView
             android:layout_width="match_parent"

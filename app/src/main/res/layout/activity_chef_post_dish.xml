@@ -121,7 +121,7 @@
         android:layout_width="240dp"
         android:layout_height="wrap_content"
         android:id="@+id/post"
-        android:background="@drawable/btnred"
+        android:backgroundTint="@color/Red"
         app:layout_constraintTop_toBottomOf="@id/price"
         android:text="Post"
         android:textColor="@color/white"

@@ -54,7 +54,7 @@
             android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:background="@drawable/btnred"
+            android:backgroundTint="@color/Red"
             android:drawableLeft="@drawable/whitemail"
             android:paddingLeft="10dp"
             android:text="Sign In with Email"
@@ -115,7 +115,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="25dp"
-            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/green"
             android:text="Signup"
             android:textColor="#FFFFFF" />
     </LinearLayout>

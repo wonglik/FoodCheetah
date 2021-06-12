@@ -49,7 +49,7 @@
             android:layout_height="40dp"
             android:id="@+id/otp"
             android:layout_marginTop="30dp"
-            android:background="@drawable/button_shape"
+            android:backgroundTint="@color/green"
             android:text="Send OTP"
             android:textColor="@color/white"
             android:textSize="18sp"/>
@@ -110,7 +110,7 @@
             android:layout_height="50dp"
             android:layout_marginBottom="20dp"
             android:id="@+id/btnEmail"
-            android:background="@drawable/btnred"
+            android:backgroundTint="@color/Red"
             android:text="Email"
             android:layout_marginTop="15dp"
             android:textColor="@color/white"
