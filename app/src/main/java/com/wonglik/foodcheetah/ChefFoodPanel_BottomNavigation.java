@@ -3,6 +3,8 @@ package com.wonglik.foodcheetah;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 import android.view.MenuItem;
@@ -13,6 +15,8 @@ import com.wonglik.foodcheetah.chefFoodPanel.ChefHomeFragment;
 import com.wonglik.foodcheetah.chefFoodPanel.ChefOrderFragment;
 import com.wonglik.foodcheetah.chefFoodPanel.ChefPendingOrderFragment;
 import com.wonglik.foodcheetah.chefFoodPanel.ChefProfileFragment;
+import com.wonglik.foodcheetah.customerFoodPanel.CustomerHomeFragment;
+import com.wonglik.foodcheetah.customerFoodPanel.CustomerTrackFragment;
 
 public class ChefFoodPanel_BottomNavigation extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener{
 
@@ -22,6 +26,22 @@ public class ChefFoodPanel_BottomNavigation extends AppCompatActivity implements
         setContentView(R.layout.activity_chef_food_panel_bottom_navigation);
         BottomNavigationView navigationView = findViewById(R.id.chef_bottom_navigation);
         navigationView.setOnNavigationItemSelectedListener(this);
+        String name = getIntent().getStringExtra("PAGE");
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        if(name!=null){
+            if(name.equalsIgnoreCase("Orderpage")){
+                loadcheffragment(new ChefPendingOrderFragment());
+            }else if(name.equalsIgnoreCase("Confirmpage")){
+                loadcheffragment(new ChefOrderFragment());
+            }else if(name.equalsIgnoreCase("AcceptOrderpage")){
+                loadcheffragment(new ChefOrderFragment());
+            }else if(name.equalsIgnoreCase("Deliveredpage")){
+                loadcheffragment(new ChefOrderFragment());
+            }
+        }else{
+            loadcheffragment(new ChefHomeFragment());
+        }
     }
 
     @Override
