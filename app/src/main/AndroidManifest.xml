@@ -14,8 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.FoodCheetah">
-        <activity android:name=".chefFoodPanel.UpdateDelete_Dish"></activity>
-        <activity android:name="com.canhub.cropper.CropImageActivity" />
+        <activity android:name=".Login_Success_Delivery"></activity>
+        <activity android:name=".chefFoodPanel.UpdateDelete_Dish" />
         <activity android:name=".chefFoodPanel.chef_postDish" />
         <activity android:name=".DeliveryVerifyPhone" />
         <activity android:name=".Deliverysendotp" />
