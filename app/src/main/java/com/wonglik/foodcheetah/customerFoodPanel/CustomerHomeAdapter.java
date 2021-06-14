@@ -42,7 +42,7 @@ public class CustomerHomeAdapter extends RecyclerView.Adapter<CustomerHomeAdapte
 
         final UpdateDishModel updateDishModel = updateDishModellist.get(position);
         Glide.with(mcontext).load(updateDishModel.getImageURL()).into(holder.imageView);
-        holder.Dishname.setText(updateDishModel.getPrice());
+        holder.Dishname.setText(updateDishModel.getDishes());
         updateDishModel.getRandomUID();
         updateDishModel.getChefId();
         holder.Price.setText("Price: RM"+updateDishModel.getPrice());
