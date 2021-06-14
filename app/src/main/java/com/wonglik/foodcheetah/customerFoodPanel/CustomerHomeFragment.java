@@ -54,33 +54,33 @@ public class CustomerHomeFragment extends Fragment implements SwipeRefreshLayout
             @Override
             public void run() {
                 swipeRefreshLayout.setRefreshing(true);
-                String  userid = FirebaseAuth.getInstance().getCurrentUser().getUid();
+                String userid = FirebaseAuth.getInstance().getCurrentUser().getUid();
                 dataa = FirebaseDatabase.getInstance().getReference("Customer").child(userid);
                 dataa.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
-                    public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                        Customer custo = snapshot.getValue(Customer.class);
-                        State = custo.getState();
-                        City = custo.getCity();
-                        Area = custo.getArea();
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        Customer cust = dataSnapshot.getValue(Customer.class);
+                        State = cust.getState();
+                        City = cust.getCity();
+                        Area = cust.getArea();
                         customermenu();
                     }
 
                     @Override
-                    public void onCancelled(@NonNull DatabaseError error) {
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
 
                     }
                 });
             }
         });
 
-
         return v;
     }
 
+
     @Override
     public void onRefresh() {
+
         customermenu();
     }
 
@@ -90,23 +90,24 @@ public class CustomerHomeFragment extends Fragment implements SwipeRefreshLayout
         databaseReference = FirebaseDatabase.getInstance().getReference("FoodDetails").child(State).child(City).child(Area);
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 updateDishModelList.clear();
-                for (DataSnapshot snapshot1 : snapshot.getChildren()){
-                    for(DataSnapshot snapshot2 : snapshot1.getChildren()){
-                        UpdateDishModel updateDishModel = snapshot2.getValue(UpdateDishModel.class);
+                for (DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    for (DataSnapshot snapshot1 : snapshot.getChildren()) {
+                        UpdateDishModel updateDishModel = snapshot1.getValue(UpdateDishModel.class);
                         updateDishModelList.add(updateDishModel);
                     }
                 }
-                adapter = new CustomerHomeAdapter(getContext(),updateDishModelList);
+                adapter = new CustomerHomeAdapter(getContext(), updateDishModelList);
                 recyclerView.setAdapter(adapter);
                 swipeRefreshLayout.setRefreshing(false);
+
             }
 
             @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-                swipeRefreshLayout.setRefreshing(false);
+            public void onCancelled(@NonNull DatabaseError databaseError) {
 
+                swipeRefreshLayout.setRefreshing(false);
             }
         });
 

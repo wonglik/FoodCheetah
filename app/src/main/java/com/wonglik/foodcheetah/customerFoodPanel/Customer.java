@@ -1,7 +1,7 @@
 package com.wonglik.foodcheetah.customerFoodPanel;
 public class Customer {
 
-    private String city,FirstName,LastName,Password,ConfirmPassword,EmailId,MobileNo,State,Area,LocalAddress;
+    private String City,FirstName,LastName,Password,ConfirmPassword,EmailId,MobileNo,State,Area,LocalAddress;
 
     public Customer(){
     }
@@ -9,7 +9,7 @@ public class Customer {
 
 
     public Customer(String city, String firstName, String lastName, String password, String confirmPassword, String emailId, String mobileNo, String state, String area, String localAddress) {
-        this.city = city;
+        this.City = city;
         FirstName = firstName;
         LastName = lastName;
         Password = password;
@@ -22,11 +22,11 @@ public class Customer {
     }
 
     public String getCity() {
-        return city;
+        return City;
     }
 
     public void setCity(String city) {
-        this.city = city;
+        City = city;
     }
 
     public String getFirstName() {
